@@ -81,44 +81,12 @@ A robust Django REST API backend with comprehensive user authentication features
 
 The API will be available at `http://127.0.0.1:8000/`
 
-## API Endpoints
-
-### Authentication Endpoints
-- `POST /accounts/register/` - User registration
-- `POST /accounts/login/` - User login
-- `POST /accounts/logout/` - User logout
-- `POST /accounts/refresh/` - Refresh JWT token
-- `POST /accounts/password/reset/` - Password reset request
-- `POST /accounts/password/reset/confirm/` - Password reset confirmation
-
-### User Management
-- `GET /accounts/profile/` - Get user profile
-- `PUT /accounts/profile/` - Update user profile
-- `POST /accounts/verify-email/` - Email verification
 
 ### API Documentation
 - `/api/schema/` - OpenAPI schema
 - `/api/docs/` - Swagger UI documentation
 - `/api/redoc/` - ReDoc documentation
 
-## Project Structure
-
-```
-├── accounts/                 # User authentication app
-│   ├── models.py            # Custom user model
-│   ├── views.py             # API views
-│   ├── serializers.py       # API serializers
-│   ├── urls.py              # App URLs
-│   ├── authentication.py    # Custom JWT authentication
-│   ├── email_utils.py       # Email utilities
-│   └── templates/           # Email templates
-├── core/                    # Project settings
-│   ├── settings.py          # Django settings
-│   ├── urls.py              # Main URL configuration
-│   └── wsgi.py              # WSGI configuration
-├── requirements.txt         # Python dependencies
-└── manage.py               # Django management script
-```
 
 ## Configuration
 
@@ -182,19 +150,3 @@ ALLOWED_HOSTS=yourdomain.com,www.yourdomain.com
 DATABASE_URL=your-database-url
 BREVO_API_KEY=your-production-brevo-key
 ```
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Support
-
-For support and questions, please open an issue in the GitHub repository.
